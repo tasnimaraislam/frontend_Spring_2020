@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Setting the viewport to make your website look good on all devices-->
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Simple Shopping Cart using HTML & javascript">
+    <meta name="author" content="Tasnim Ara Islam">
+
+    <!--title for this template -->
+		<title>Shopping Cart Website</title>
+		<!--javascript code for this template -->
+		<script src= "js.js"></script>
+		<!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+
+
+	</head>
+	
+	<body>
+		<div class="content">
+			
+			<h1  style="text-align:center"> Shopping Cart </h1>
+			<img src="shopping_cart.png" title = "Shopping_Cart" alt="shopping cart logo">
+			<br>
+			
+				<table>
+					<thead>
+						<th> Item </th>
+						<th> Quantity </th>
+						<th> Unit Price $ <br>(/lb or #pcs) </th>
+						<th> Total Item Price </th>
+					</thead>
+
+					<tr>
+						<td> Potato </td>
+						<td> <input type="number" id="quantity1" ></td>
+						<td> <input type="number" id="unitp1"></td>
+						<td id="totalp1"></td>
+					</tr>
+
+					<tr>
+						<td> Onion </td>
+						<td> <input type="number" id="quantity2"></td>
+						<td> <input type="number" id="unitp2"></td>
+						<td id="totalp2"></td>
+					</tr>
+
+					<tr>
+						<td> 
+							<select id="new_item">
+								<option value="Select">--Select Item--</option>
+							  <option value="Tomato">Tomato</option>
+							  <option value="Cauliflower">Cauliflower</option>
+							  <option value="Milk">Milk</option>
+							  <option value="Egg">Egg</option>
+							</select>
+						</td>
+						<td> <input type="number" id="quantity3"></td>
+						<td> <input type="number" id="unitp3"></td>
+						<td id="totalp3"></td>
+					</tr> 
+
+					<tr>
+						<td colspan = "3" style="text-align:right"> 
+							<button class="button button2" onclick="compute()">TOTAL</button>  
+							
+						</td>
+						<td id="grandtotal">  </td>
+					</tr>
+
+				</table>
+			
+			<br>
+			<button class="button button3" onclick="refresh()">Checkout<br> <img src= "icon.png" title = "Checkout" alt= "Checkout logo" ></button>
+		</div>
+	</body>
+</html>
